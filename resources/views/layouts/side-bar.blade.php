@@ -13,5 +13,12 @@
                 <p>User Profile</p>
             </a>
         </li>
+
+        <li class="nav-item {{is_active('users')}}">
+            <a class="nav-link" href="{{route('users.index')}}">
+                <i class="material-icons">person</i>
+                <p>Users Management</p>
+            </a>
+        </li>
     </ul>
 </div>

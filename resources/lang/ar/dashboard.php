@@ -15,5 +15,15 @@
      'new_password'=>'كلمة المرور الجديدة',
      'current_password'=>'كلمة المرور الحالية',
      'updated_successfully'=>'تم التحديث بنجاح',
+     'added_successfully'=>'تم الأضافة بنجاح',
+     'deleted_successfully'=>'تم الحذف بنجاح',
+     'back_to_list'=>'العودة للقائمة',
+     'role' => 'دور',
+     'add_user'=>'أضف مستخدم',
+     'edit_user'=>'تعديل مستخدم',
+     'delete_user'=>'حذف مستخدم',
+     'users'=>'المستخدمين',
+     'actions'=>'الأجراءات',
+     'creation_date'=>'وقت الأضافة'
 
  ];

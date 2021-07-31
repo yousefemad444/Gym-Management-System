@@ -11,7 +11,11 @@ Auth::routes(['register'=>false]);
 
 
 Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'auth','localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]], function(){
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+    Route::group(['middleware'=>'admin'],function (){
+        Route::resource('users',\App\Http\Controllers\Admin\UsersController::class)->except('show');
+    });
+    Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
     Route::get('profile',[\App\Http\Controllers\ProfileController::class,'edit'])->name('profile.edit');
     Route::put('profile',[\App\Http\Controllers\ProfileController::class,'update'])->name('profile.update');
