@@ -21,6 +21,10 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'a
     Route::put('profile',[\App\Http\Controllers\ProfileController::class,'update'])->name('profile.update');
     Route::put('profile/password',[\App\Http\Controllers\ProfileController::class,'updatePassword'])->name('profile.updatePassword');
 
+    Route::post('customers/{customer}/image',[\App\Http\Controllers\CustomersController::class,'uploadImage'])->name('customers.uploadImage');
+    Route::get('customers/{customer}/image',[\App\Http\Controllers\CustomersController::class,'deleteImage'])->name('customers.deleteImage');
+    Route::resource('customers',\App\Http\Controllers\CustomersController::class);
+
 });
 
 

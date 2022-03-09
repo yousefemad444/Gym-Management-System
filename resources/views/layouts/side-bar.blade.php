@@ -14,12 +14,20 @@
             </a>
         </li>
         @if(auth()->user()->role=='admin')
-        <li class="nav-item {{is_active('users')}}">
-            <a class="nav-link" href="{{route('users.index')}}">
-                <i class="material-icons">person</i>
-                <p>Users Management</p>
+            <li class="nav-item {{is_active('users')}}">
+                <a class="nav-link" href="{{route('users.index')}}">
+                    <i class="material-icons">person</i>
+                    <p>Users Management</p>
+                </a>
+            </li>
+        @endif
+
+        <li class="nav-item {{is_active('customers')}}">
+            <a class="nav-link" href="{{route('customers.index')}}">
+                <i class="material-icons">content_paste</i>
+                <p>Customers</p>
             </a>
         </li>
-            @endif
+
     </ul>
 </div>

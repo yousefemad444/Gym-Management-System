@@ -1,4 +1,4 @@
 admin@admin.com
-11111111
+12345678
 admin@gym.com
 123456789

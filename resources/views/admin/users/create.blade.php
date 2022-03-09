@@ -21,6 +21,9 @@
                                 <div class="form-group">
                                     <input class="form-control" name="name" type="text" placeholder="{{__('dashboard.name')}}" value="{{old('name')}}" required />
                                 </div>
+                                @error('name')
+                                <span class="error text-danger" >{{$message}}</span>
+                                @enderror
                             </div>
                         </div>
                         <div class="row">
@@ -29,6 +32,9 @@
                                 <div class="form-group">
                                     <input class="form-control" name="email" type="email" placeholder="{{__('dashboard.email')}}" value="{{old('email')}}" required />
                                 </div>
+                                @error('email')
+                                <span class="error text-danger" >{{$message}}</span>
+                                @enderror
                             </div>
                         </div>
                         <div class="row">
@@ -37,6 +43,9 @@
                                 <div class="form-group">
                                     <input class="form-control"  type="password" name="password"  placeholder="{{__('dashboard.password')}}"  required />
                                 </div>
+                                @error('password')
+                                <span class="error text-danger" >{{$message}}</span>
+                                @enderror
                             </div>
                         </div>
                         <div class="row">
@@ -56,6 +65,9 @@
                                         <option value="user">User</option>
                                     </select>
                                 </div>
+                                @error('role')
+                                <span class="error text-danger" >{{$message}}</span>
+                                @enderror
                             </div>
                         </div>
                     </div>
